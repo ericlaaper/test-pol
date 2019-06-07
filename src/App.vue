@@ -1,31 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <v-app ma-0 pa-0>
+        <v-parallax
+
+                height="1350"
+                v-image :src="require('./assets/wereldbol.jpg')"
+
+        >
+
+        <Toolbar></Toolbar>
+        <v-content>
+            <router-view></router-view>
+        </v-content>
+        </v-parallax>
+    </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+    import HelloWorld from './components/HelloWorld'
+    import Toolbar from './components/core/Toolbar'
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    export default {
+        name: 'App',
+        components: {
+            Toolbar,
+            HelloWorld
+        },
+        data() {
+            return {
+                //
+            }
+        }
+    }
+</script>
+<style scoped>
+    .bb {
+        padding-top: 0px;
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+    }
+
 </style>
