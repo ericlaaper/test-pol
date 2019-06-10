@@ -20,7 +20,7 @@
     </v-slider>
         <v-layout row justify-space-between>
             <v-flex xs2>
-                <div class="light-blue--text">
+                <div class="caption light-blue--text">
                     Ik twijfel hier sterk aan
                 </div>
             </v-flex>
@@ -28,7 +28,7 @@
 
             </v-flex>
             <v-flex xs2>
-                <div class="light-blue--text">
+                <div class="caption light-blue--text">
                     Ik twijfel hier niet aan
                 </div>
             </v-flex>
