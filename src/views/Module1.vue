@@ -13,8 +13,9 @@
                 </v-stepper-step>
                 <v-stepper-content step="1">
                     <div class="vraag">
+                        <h1>
                         Welkom
-
+                        </h1>
                     </div>
 
                     <div class="normaal">
@@ -63,10 +64,12 @@
                 </v-stepper-step>
                 <v-stepper-content step="3">
                     <div class="normaal">
+                        <p>
                         Voor uw medewerkers, klanten en leveranciers bent u het boegbeeld van uw onderneming. Als u
                         plotseling wegvalt, kan dit betekenen dat het vertrouwen in de toekomst van de onderneming wordt
                         aangetast.<br>Met als gevolg dat uw belangrijkste stakeholders andere keuzes maken en de
                         bedrijfscontinuïteit in korte tijd onder druk kan komen te staan.
+                        </p>
                     </div>
                     <div><br></div>
                     <div class="vraag">
@@ -80,7 +83,7 @@
                         </h1>
                     </div>
                     <ta-slider :test1.sync="vraag1"></ta-slider>
-                    <p>{{vraag1}}</p>
+
                     <knopverder
                             :onClick="verderzonderval">
                     </knopverder>
@@ -95,10 +98,12 @@
                 </v-stepper-step>
                 <v-stepper-content step="4">
                     <div class="normaal">
+                        <p>
                         In de situatie dat u plotseling niet aanwezig kunt zijn, zal iemand anders uw dagelijkse
                         werkzaamheden moeten overnemen. Binnen de onderneming zal dit ook duidelijk moeten zijn, zodat
                         er geen verwarring ontstaat over de dagelijkse leiding. Iemand die tijdelijk de dagelijkse
                         leiding overneemt, noemt men een waarnemer.
+                        </p>
                     </div>
                     <div class="vraag">
                         <h1>
@@ -193,10 +198,12 @@
                 </v-stepper-step>
                 <v-stepper-content step="6">
                     <div class="normaal">
+                        <p>
                         Voor uw medewerkers, klanten en leveranciers bent u het boegbeeld van uw onderneming. Als u
                         plotseling wegvalt, kan dit betekenen dat het vertrouwen in de toekomst van de onderneming wordt
                         aangetast.<br>Met als gevolg dat uw belangrijkste stakeholders andere keuzes maken en de
                         bedrijfscontinuïteit in korte tijd onder druk kan komen te staan.
+                        </p>
                     </div>
 
                     <div><br></div>
@@ -211,7 +218,7 @@
                         </h1>
                     </div>
                     <ta-slider :test1.sync="vraag4"></ta-slider>
-                    <p>{{vraag4}}</p>
+
                     <knopverder
                             :onClick="verderzonderval">
                     </knopverder>
@@ -226,8 +233,10 @@
                 </v-stepper-step>
                 <v-stepper-content step="7">
                     <div class="normaal">
+                        <p>
                         Belangrijk is dat uw noodopvolger uw onderneming juridisch mag vertegenwoordigen, denk hierbij
                         aan inschrijving KvK, machtiging bankrekening et cetera.
+                        </p>
                     </div>
                     <div class="vraag">
                         <h1>
@@ -277,12 +286,14 @@
                 </v-stepper-step>
                 <v-stepper-content step="8">
                     <div class="normaal">
+                        <p>
                         In de situatie dat u permanent niet meer aanwezig kunt zijn, zal de onderneming uiteindelijk in
                         andere handen overgaan of wellicht zelfs in het uiterste geval haar activiteiten staken. Voor uw
                         noodopvolger en gezin is het van essentieel belang om te weten wat uw wensen zijn als u zelf
                         niet meer betrokken kunt zijn bij uw onderneming. Het gaat daarbij om de strategie van de
                         onderneming zelf en om de strategische keuze met betrekking tot het eigendom over de
                         onderneming.
+                        </p>
                     </div>
                     <div class="vraag">
                         <h1>
@@ -326,7 +337,9 @@
                 </v-stepper-step>
                 <v-stepper-content step="9">
                     <div class="normaal">
+                        <p>
                         Hier moet nog een tekst
+                        </p>
                     </div>
                     <div class="vraag">
                         <h1>
@@ -372,11 +385,13 @@
                 </v-stepper-step>
                 <v-stepper-content step="10">
                     <div class="normaal">
+                        <p>
                         In de situatie dat u permanent niet meer aanwezig kunt zijn, zult u ook uw gezin willen
                         beschermen tegen de gevolgen hiervan. Vanuit financieel oogpunt zult u bijvoorbeeld het verlies
                         aan inkomen voor een belangrijk deel of zelfs volledig willen compenseren. Dat vraagt om een
                         aantal financiële maatregelen, zowel binnen de onderneming als in de privésituatie.<br>Bijvoorbeeld
                         als u een eigen woning hebt gekocht en daarvoor financiering hebt aangetrokken.
+                        </p>
                     </div>
                     <div class="vraag">
                         <h1>
@@ -430,9 +445,11 @@
                         Einde
                     </div>
                     <div class="normaal">
+                        <p>
                         U bent aan het einde gekomen van deze vragenlijst. U kunt u gegeven antwoorden nog aanpassen.
                         Gebruik hiervoor de knoppen terug en verder.<br> Binnen enkele minuten kunt u uw persoonlijke rapportage
-                        verwachten in uw mailbox.
+                        verwachten in uw mailbox. (Vergeet niet op verstuur te klikken)
+                        </p>
                     </div>
 <!--                    <div class="stelling">-->
 <!--                        Opmerkingen-->
@@ -452,9 +469,13 @@
 <!--                        ></v-textarea>-->
 
                         <div class="normaal">
+                            <p>
                             Wij gaan op een zorgvuldige wijze met uw gegevens om. Kijk voor al onze voorwaarden op onze
                             website!<br>
-                            www.trustedaccountant.nl/privacy
+                            www.trustedaccountant.nl/privacy<br>
+                                (Vergeet niet op verstuur te klikken)
+                            </p>
+
                         </div>
                         <div>
                             <br>
@@ -557,7 +578,7 @@
                 }
             },
             verdermetval6() {
-               
+
                     this.stap = 1;
 
 

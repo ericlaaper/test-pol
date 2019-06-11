@@ -51,9 +51,11 @@
         return {
             drawer: false,
             links: [
-                { icon: 'dashboard', text: 'Dashboard', route: '/' },
-                { icon: 'folder', text: 'Uw Modules', route: '/modules' },
+                { icon: 'dashboard', text: 'Home', route: '/' },
+                { icon: 'folder', text: 'QuickScan', route: '/module1' },
                 { icon: 'person', text: 'Team', route: '/team' },
+                { icon: 'person', text: 'Login', route: '/team' },
+                { icon: 'person', text: 'Logout', route: '/team' },
             ],
 
         }
