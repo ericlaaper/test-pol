@@ -40,7 +40,8 @@
                            poster="../assets/introfilm.png"
                            class="alignVideo"
                            src="../assets/mod7.mp4"
-                           type='video/mp4'>
+                           type='video/mp4'
+                            muted >
                     </video>
                     <div class="normaal">
                         <h1>en even een test</h1>
@@ -82,7 +83,7 @@
                             Mijn onderneming blijft gewoon doordraaien als ik plotseling wegval!
                         </h1>
                     </div>
-                    <ta-slider :test1.sync="vraag1"></ta-slider>
+                    <ta-slider :test1.sync="vraag1e"></ta-slider>
 
                     <knopverder
                             :onClick="verderzonderval">
@@ -111,7 +112,7 @@
                         </h1>
                     </div>
                     <v-form v-model="valid" ref="form" lazy-validation>
-                        <v-radio-group v-model="vraag2"
+                        <v-radio-group v-model="vraag2e"
                                        :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                                        required>
                             <v-radio value='ja'>
@@ -146,6 +147,7 @@
                 </v-stepper-step>
                 <v-stepper-content step="5">
                     <div class="normaal">
+                        <p>
                         In de situatie dat u permanent niet meer aanwezig kunt zijn, bijvoorbeeld door zware
                         arbeidsongeschiktheid of overlijden, zal iemand uw rol moeten overnemen. Wij noemen deze persoon
                         uw noodopvolger. Dit hoeft niet dezelfde persoon te zijn als uw waarnemer, maar dat kan
@@ -156,6 +158,7 @@
                         overdracht of verkoop van uw onderneming. Dit vraagt om persoonlijke vaardigheden zoals
                         managementvaardigheden, stressbestendigheid, persoonlijk overwicht en senioriteit.<br>Belangrijk
                         is dat uw noodopvolger uw onderneming juridisch mag vertegenwoordigen.
+                        </p>
                     </div>
                     <div class="vraag">
                         <h1>
@@ -163,7 +166,7 @@
                         </h1>
                     </div>
                     <v-form v-model="valid1" ref="form1" lazy-validation>
-                        <v-radio-group v-model="vraag3"
+                        <v-radio-group v-model="vraag3e"
                                        :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                                        required>
                             <v-radio value='ja'>
@@ -214,10 +217,10 @@
                     </div>
                     <div class="stelling">
                         <h1>
-                            Mijn nooodopvolger kan soepel mijn werkzaamheden overnemen als ik plotseling wegval!
+                            Mijn noodopvolger kan soepel mijn werkzaamheden overnemen als ik plotseling wegval!
                         </h1>
                     </div>
-                    <ta-slider :test1.sync="vraag4"></ta-slider>
+                    <ta-slider :test1.sync="vraag4e"></ta-slider>
 
                     <knopverder
                             :onClick="verderzonderval">
@@ -244,7 +247,7 @@
                         </h1>
                     </div>
                     <v-form v-model="valid2" ref="form2" lazy-validation>
-                        <v-radio-group v-model="vraag5"
+                        <v-radio-group v-model="vraag5e"
                                        :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                                        required>
                             <v-radio value='ja'>
@@ -301,7 +304,7 @@
                         </h1>
                     </div>
                     <v-form v-model="valid3" ref="form3" lazy-validation>
-                        <v-radio-group v-model="vraag6"
+                        <v-radio-group v-model="vraag6e"
                                        :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                                        required>
                             <v-radio value='ja'>
@@ -348,7 +351,7 @@
                         </h1>
                     </div>
                     <v-form v-model="valid4" ref="form4" lazy-validation>
-                        <v-radio-group v-model="vraag7"
+                        <v-radio-group v-model="vraag7e"
                                        :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                                        required>
                             <v-radio value='ja'>
@@ -399,7 +402,7 @@
                         </h1>
                     </div>
                     <v-form v-model="valid5" ref="form5" lazy-validation>
-                        <v-radio-group v-model="vraag8"
+                        <v-radio-group v-model="vraag8e"
                                        :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                                        required>
                             <v-radio value='ja'>
@@ -524,14 +527,14 @@
                 stap: 1,
                 bpm: 0,
                 bpm1: 0,
-                vraag1: 0,
-                vraag2: null,
-                vraag3: null,
-                vraag4: null,
-                vraag5: null,
-                vraag6: null,
-                vraag7: null,
-                vraag8: null,
+                vraag1e: 0,
+                vraag2e: null,
+                vraag3e: null,
+                vraag4e: null,
+                vraag5e: null,
+                vraag6e: null,
+                vraag7e: null,
+                vraag8e: null,
                 opmerking: String,
                 sex: null,
 
