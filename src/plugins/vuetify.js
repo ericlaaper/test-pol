@@ -3,6 +3,7 @@ import Vuetify from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 import nl from 'vuetify/es5/locale/nl'
 
+
 Vue.use(Vuetify, {
     theme: {
         primary: '#d22630',

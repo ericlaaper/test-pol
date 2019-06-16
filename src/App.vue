@@ -7,10 +7,10 @@
 
         >
 
-        <Toolbar></Toolbar>
-        <v-content>
-            <router-view></router-view>
-        </v-content>
+            <Toolbar></Toolbar>
+            <v-content>
+                <router-view></router-view>
+            </v-content>
         </v-parallax>
     </v-app>
 </template>

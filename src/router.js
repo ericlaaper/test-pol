@@ -13,6 +13,7 @@ import Module8 from './views/Module8.vue'
 import Module9 from './views/Module9.vue'
 import Module10 from './views/Module10.vue'
 import Module11 from './views/Module11.vue'
+import Login from './views/Login.vue'
 
 Vue.use(Router)
 
@@ -31,7 +32,7 @@ export default new Router({
             component: Modules
         },
         {
-            path: '/module1',
+            path: '/quickscan',
             name: 'Module1',
             component: Module1
         },
@@ -84,6 +85,11 @@ export default new Router({
             path: '/module11',
             name: 'Module11',
             component: Module11
+        },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login
         },
 
         {

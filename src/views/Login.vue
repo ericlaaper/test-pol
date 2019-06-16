@@ -1,0 +1,214 @@
+<template>
+    <v-flex xs12 sm6 offset-sm3>
+        <v-card class="mb-5">
+            <v-toolbar color="info">
+                <v-toolbar-title class="white--text">Noodsituatie</v-toolbar-title>
+            </v-toolbar>
+
+            <div id="login">
+
+
+
+
+                        <v-card>
+                            <v-card-text class="pt-4">
+                                <div>
+                                    <v-form v-model="valid" ref="form">
+                                        <v-text-field
+                                                label="Vul uw  e-mail in"
+                                                v-model="email"
+                                                :rules="emailRules"
+                                                required
+                                        ></v-text-field>
+                                        <v-text-field
+                                                label="Vul uw paswoord in"
+                                                v-model="wachtwoord"
+                                                min="8"
+                                                :type="e1 ? 'wachtwoord' : 'text'"
+                                                :rules="passwordRules"
+                                                required
+                                        ></v-text-field>
+                                        <v-layout justify-space-between>
+                                            <v-btn @click="submit" :class=" { 'blue darken-4 white--text' : valid, disabled: !valid }">Login</v-btn>
+                                        </v-layout>
+                                    </v-form>
+                                </div>
+                            </v-card-text>
+                        </v-card>
+
+
+
+<!--               <v-card class="mb-2">-->
+<!--&lt;!&ndash;                <div class="signin-form">&ndash;&gt;-->
+<!--                    <form @submit.prevent="onSubmit">-->
+<!--                        <div class="input">-->
+<!--                            <label for="email">e-mail</label>-->
+<!--                            <input-->
+<!--                                    type="email"-->
+<!--                                    id="email"-->
+<!--                                    v-model="email">-->
+<!--                        </div>-->
+<!--                        <div class="input">-->
+<!--                            <label for="password">Wachtwoord</label>-->
+<!--                            <input-->
+<!--                                    type="password"-->
+<!--                                    id="password"-->
+<!--                                    v-model="wachtwoord">-->
+<!--                        </div>-->
+<!--                        <div class="submit">-->
+<!--                            <button type="submit">Submit</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--               </v-card>-->
+<!--                </div>-->
+            </div>
+            <div>
+                <v-alert
+                        v-model="alert"
+                        dismissible
+                        type="success"
+                >
+                   Controleer a.u.b. uw gegevens!
+                </v-alert>
+
+
+            </div>
+
+
+        </v-card>
+    </v-flex>
+</template>
+
+<script>
+    import axios from 'axios';
+
+
+    export default {
+        name: "Login",
+        data() {
+            return {
+                valid: false,
+                e1:false,
+                passwordRules: [
+                    (v) => !!v || 'Wachtwoord is verplicht',
+                ],
+                email: '',
+                emailRules: [
+                    (v) => !!v || 'E-mail is verplicht',
+                    (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Dit lijkt geen goed email adres'
+                ],
+                wachtwoord: '',
+                alert:false,
+                token: '',
+                data: {},
+                results: []
+            }
+        },
+        methods: {
+            submit() {
+                console.log('login clicked');
+                if (this.$refs.form.validate()){
+                let data = JSON.stringify({
+                    password: this.wachtwoord,
+                    email: this.email,
+                });
+
+                axios.post('https://trustedaccountant.tools-mkbadviespraktijk.nl/api/Loginquick1', data, {
+                    headers: {
+                        // 'X-CSRF-TOKEN': window.Laravel.csrfToken,
+                        // 'X-Requested-With': 'XMLHttpRequest'
+                        'Content-Type': 'application/json;charset=UTF-8',
+                        "Access-Control-Allow-Origin": "*",
+                    }
+                })
+                    .then(response => {
+                        console.log(response);
+                        this.token = response.data.token;
+                        if (this.token === undefined) {
+                            console.log('verkeerde gegevens');
+                            this.alert = true;
+                        }
+                        else{
+                            console.log('juiste gegevens');
+                            this.alert = false;
+                            localStorage.setItem('token',JSON.stringify(response.data.token));
+                            localStorage.setItem('email', JSON.stringify(this.email));
+                            localStorage.setItem('wachtwoord', JSON.stringify(this.wachtwoord));
+                            this.$router.push({ path: '/quickscan' })
+                            // naar volgende pagina
+                            //  slim opslaan
+
+                        }
+                    })
+
+
+                // ( response =>   {
+                //     console.log(response);
+                //     token = response.data.data.token;
+                //     localStorage.setItem('token', response.data.data.token)
+                //
+                // })
+                }
+            },
+
+        }
+    }
+</script>
+
+<style scoped>
+    .signin-form {
+        width: 400px;
+        margin: 30px auto;
+
+        border: 1px solid #eee;
+        padding: 20px;
+        box-shadow: 0 2px 3px #ccc;
+    }
+
+    .input {
+        margin: 10px auto;
+    }
+
+    .input label {
+        display: block;
+        color: #4e4e4e;
+        margin-bottom: 6px;
+    }
+
+    .input input {
+        font: inherit;
+        width: 100%;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+
+    .input input:focus {
+        outline: none;
+        border: 1px solid #521751;
+        background-color: #eee;
+    }
+
+    .submit button {
+        border: 1px solid #521751;
+        color: #521751;
+        padding: 10px 20px;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .submit button:hover,
+    .submit button:active {
+        background-color: #521751;
+        color: white;
+    }
+
+    .submit button[disabled],
+    .submit button[disabled]:hover,
+    .submit button[disabled]:active {
+        border: 1px solid #ccc;
+        background-color: transparent;
+        color: #ccc;
+        cursor: not-allowed;
+    }
+</style>

@@ -1,14 +1,16 @@
 <template>
-  <Module1></Module1>
+  <Login></Login>
 </template>
 
 <script>
 
-  import Module1 from '../views/Module1'
+
+  import Login from "./Login";
 
   export default {
     components: {
-        Module1,
+        Login,
+
 
     }
   }

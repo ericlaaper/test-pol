@@ -491,7 +491,7 @@
                         </v-btn>
                         <knopterug :onClick="terug">
                         </knopterug>
-                    </v-form>
+
 
 
                 </v-stepper-content>
@@ -510,6 +510,7 @@
     import Stellingtekst from "../components/stellingtekst";
     import Knopverder from "../components/knopverder";
     import Knopterug from "../components/knopterug";
+    import axios from 'axios';
 
     export default {
         name: "Module1.vue",
@@ -523,6 +524,7 @@
                 valid4: true,
                 valid5: true,
                 valid6: true,
+                token: '',
                 status: 0,
                 stap: 1,
                 bpm: 0,
@@ -530,14 +532,13 @@
                 vraag1e: 0,
                 vraag2e: null,
                 vraag3e: null,
-                vraag4e: null,
+                vraag4e:0,
                 vraag5e: null,
                 vraag6e: null,
                 vraag7e: null,
                 vraag8e: null,
                 opmerking: String,
                 sex: null,
-
 
 
             };
@@ -581,11 +582,47 @@
                 }
             },
             verdermetval6() {
+                console.log('Verzenden');
+                let data = JSON.stringify({
+                    token:  this.token,
+                    vraag1e: this.vraag1e,
+                    vraag2e: this.vraag2e,
+                    vraag3e: this.vraag3e,
+                    vraag4e: this.vraag4e,
+                    vraag5e: this.vraag5e,
+                    vraag6e: this.vraag6e,
+                    vraag7e: this.vraag7e,
+                    vraag8e: this.vraag8e
 
-                    this.stap = 1;
+                });
 
 
+                axios.post('https://trustedaccountant.tools-mkbadviespraktijk.nl/api/Bewaarquick1ex', data, {
+                        headers: {
+                            'Content-Type': 'application/json;charset=UTF-8',
+                            "Access-Control-Allow-Origin": "*",
+                            "Access-Control-Allow-Methods": "*",
+                            "Access-Control-Allow-Headers": "*"
+
+                        }
+                    }
+                )
+                    .then(function (response) {
+
+                        console.log(response);
+                        this.$router.push({ name:'home'});
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+                this.$router.push({ name:'home'});
             },
+
+
+
+
+
+
 
             verderzonderval() {
                 this.stap++
@@ -616,11 +653,37 @@
                 this.stap++
 
             }
+        },
+        mounted() {
+            console.log('App mounted!');
+            this.token = JSON.parse(localStorage.getItem('token'));
+            if (localStorage.getItem('vraag1e')) this.vraag1e = JSON.parse(localStorage.getItem('vraag1e'));
+            if (localStorage.getItem('vraag2e')) this.vraag2e = JSON.parse(localStorage.getItem('vraag2e'));
+        },
+
+
+        watch: {
+            vraag1e: {
+                handler() {
+                    console.log('Todos changed!');
+                    localStorage.setItem('vraag1e', JSON.stringify(this.vraag1e));
+                },
+                deep: true,
+            },
+            vraag2e: {
+                handler() {
+                    console.log('Todos changed!');
+                    localStorage.setItem('vraag2e', JSON.stringify(this.vraag2e));
+                },
+                deep: true,
+            },
         }
     }
 </script>
 
 <style scoped>
+
+
     .alignVideo {
         width: 100%;
         height: auto;
@@ -745,6 +808,5 @@
 
 
     }
-
 
 </style>
