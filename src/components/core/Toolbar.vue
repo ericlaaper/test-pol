@@ -7,7 +7,7 @@
             <span class="blue--text">Accountant</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-icon @click="naarlogin()">Login</v-icon>
+
     </v-toolbar>
         <!-- dropdown menu -->
         <v-navigation-drawer app v-model="drawer" class="secondary">

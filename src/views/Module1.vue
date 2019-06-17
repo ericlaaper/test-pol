@@ -20,7 +20,8 @@
 
                     <div class="normaal">
                         <p>
-                        en nog een kort welkom
+                            Veel ondernemers schatten het risico op het plotseling wegvallen als gevolg van een ziekte of ongeval laag in. Dat maakt dat ze weinig tot geen maatregelen nemen om hun onderneming en gezin tegen de impact hiervan te beschermen.  <br>
+                            Met deze App nodigen wij u uit een korte vragenlijst over Noodopvolging voor uzelf in te vullen. Met de knop Verder gaat u naar de inleiding.
                         </p>
                     </div>
 
@@ -37,9 +38,9 @@
                 </v-stepper-step>
                 <v-stepper-content step="2">
                     <video controls
-                           poster="../assets/introfilm.png"
+                           poster="../assets/start.png"
                            class="alignVideo"
-                           src="../assets/mod7.mp4"
+                           src="../assets/Noodopvolging.mp4"
                            type='video/mp4'
                             muted >
                     </video>
@@ -48,9 +49,7 @@
                     </div>
                     <div class="normaal">
                         <p>
-                            Een een mooie tekst Een een mooie tekst Een een mooie tekst Een een mooie tekst Een een
-                            mooie tekst Een een mooie tekst Een een mooie tekst Een een mooie tekst Een een mooie tekst
-                            Een een mooie tekst Een een mooie tekst Een een mooie tekst
+                            In de bovenstaande animatie treft u een korte inleiding aan op het onderwerp Noodopvolging. U kunt de animatie ook overslaan en direct naar de eerste vraag gaan met de knop Verder.
 
                         </p>
                     </div>
@@ -151,12 +150,7 @@
                         In de situatie dat u permanent niet meer aanwezig kunt zijn, bijvoorbeeld door zware
                         arbeidsongeschiktheid of overlijden, zal iemand uw rol moeten overnemen. Wij noemen deze persoon
                         uw noodopvolger. Dit hoeft niet dezelfde persoon te zijn als uw waarnemer, maar dat kan
-                        natuurlijk wel.<br>Nog meer dan bij de keuze van een waarnemer, spelen de kennis, ervaring en
-                        managementvaardigheden een rol bij de keuze van een noodopvolger. Allereerst omdat de
-                        noodopvolger in staat zal moeten zijn om uw onderneming veilig door een ontstane crisis zal
-                        moeten loodsen, over een langere tijd leiding moeten geven en betrokken zal moeten zijn bij de
-                        overdracht of verkoop van uw onderneming. Dit vraagt om persoonlijke vaardigheden zoals
-                        managementvaardigheden, stressbestendigheid, persoonlijk overwicht en senioriteit.<br>Belangrijk
+                        natuurlijk wel.<br>Belangrijk
                         is dat uw noodopvolger uw onderneming juridisch mag vertegenwoordigen.
                         </p>
                     </div>
@@ -202,10 +196,9 @@
                 <v-stepper-content step="6">
                     <div class="normaal">
                         <p>
-                        Voor uw medewerkers, klanten en leveranciers bent u het boegbeeld van uw onderneming. Als u
-                        plotseling wegvalt, kan dit betekenen dat het vertrouwen in de toekomst van de onderneming wordt
-                        aangetast.<br>Met als gevolg dat uw belangrijkste stakeholders andere keuzes maken en de
-                        bedrijfscontinuïteit in korte tijd onder druk kan komen te staan.
+                            Nog meer dan bij de keuze van een waarnemer, spelen de kennis, ervaring en managementvaardigheden een rol bij de keuze van een noodopvolger.<br>
+                            Uw noodopvolger zal in staat moeten zijn om uw onderneming veilig door de ontstane crisis te loodsen, over een langere tijd leiding moeten geven en betrokken moeten zijn bij de overdracht of verkoop van uw onderneming.<br>
+                            Dit vraagt om persoonlijke vaardigheden zoals managementvaardigheden, stressbestendigheid, persoonlijk overwicht en senioriteit. In hoeverre beschikt uw beoogde opvolger over deze vaardigheden?
                         </p>
                     </div>
 
@@ -217,7 +210,7 @@
                     </div>
                     <div class="stelling">
                         <h1>
-                            Mijn noodopvolger kan soepel mijn werkzaamheden overnemen als ik plotseling wegval!
+                            Mijn opvolger kan soepel mijn rol overnemen als ik plotseling wegval!
                         </h1>
                     </div>
                     <ta-slider :test1.sync="vraag4e"></ta-slider>
@@ -231,19 +224,18 @@
                 <!--Stap 6-->
                 <v-stepper-step step="7">
                     <div class="staptekts">
-                        Vertegenwoordigen
+                        Vertegenwoordiging
                     </div>
                 </v-stepper-step>
                 <v-stepper-content step="7">
                     <div class="normaal">
                         <p>
-                        Belangrijk is dat uw noodopvolger uw onderneming juridisch mag vertegenwoordigen, denk hierbij
-                        aan inschrijving KvK, machtiging bankrekening et cetera.
+                            Belangrijk is dat in uw afwezigheid uw noodopvolger de onderneming juridisch kan vertegenwoordigen. Denk hierbij aan afspraken met klanten en leveranciers, de inschrijving bij de Kamer van Koophandel, maar ook inzicht en toegang tot de zakelijke rekeningen en het uitvoeren van betalingen.
                         </p>
                     </div>
                     <div class="vraag">
                         <h1>
-                            Is uw vertegenwoordiger gemachtigd?
+                            Is uw vertegenwoordiger (waarnemer/opvolger) voldoende gemachtigd?
                         </h1>
                     </div>
                     <v-form v-model="valid2" ref="form2" lazy-validation>
@@ -290,17 +282,14 @@
                 <v-stepper-content step="8">
                     <div class="normaal">
                         <p>
-                        In de situatie dat u permanent niet meer aanwezig kunt zijn, zal de onderneming uiteindelijk in
-                        andere handen overgaan of wellicht zelfs in het uiterste geval haar activiteiten staken. Voor uw
-                        noodopvolger en gezin is het van essentieel belang om te weten wat uw wensen zijn als u zelf
-                        niet meer betrokken kunt zijn bij uw onderneming. Het gaat daarbij om de strategie van de
-                        onderneming zelf en om de strategische keuze met betrekking tot het eigendom over de
-                        onderneming.
+                            In de situatie dat u permanent niet meer aanwezig kunt zijn, zal de onderneming uiteindelijk in andere handen overgaan of wellicht zelfs in het uiterste geval haar activiteiten staken.<br>
+                            Voor uw noodopvolger en gezin is het van essentieel belang om te weten wat uw wensen zijn als u zelf niet meer betrokken kunt zijn bij uw onderneming. Allereerst wat is de strategie van het bedrijf en is deze strategie bij alle betrokkenen?
+
                         </p>
                     </div>
                     <div class="vraag">
                         <h1>
-                            Hebt u een uitgewerkt business plan voor uw onderneming?
+                            Hebt u een uitgewerkt businessplan voor uw onderneming?
                         </h1>
                     </div>
                     <v-form v-model="valid3" ref="form3" lazy-validation>
@@ -341,13 +330,12 @@
                 <v-stepper-content step="9">
                     <div class="normaal">
                         <p>
-                        Hier moet nog een tekst
+                            Daarnaast is er de strategische keuze met betrekking tot het eigendom over de onderneming. Dienen uw naasten het eigendom in het bedrijf voort te zetten of wilt u dat het bedrijf wordt verkocht?
                         </p>
                     </div>
                     <div class="vraag">
                         <h1>
-                            Hebt u uw wensen over de toekomst van uw onderneming, bijvoorbeeld overdragen of verkopen,
-                            vastgelegd?
+                            Hebt u uw wensen over de toekomst van uw bedrijf, bijvoorbeeld overdragen of verkopen, vastgelegd?
                         </h1>
                     </div>
                     <v-form v-model="valid4" ref="form4" lazy-validation>
@@ -419,7 +407,7 @@
                                     </div>
                                 </template>
                             </v-radio>
-                            <v-radio value='onb'>
+                            <v-radio value='onbekend'>
                                 <template slot="label">
                                     <div class="normaal">
                                         weet niet /onbekend
@@ -615,6 +603,7 @@
                     .catch(function (error) {
                         console.log(error);
                     });
+                localStorage.clear();
                 this.$router.push({ name:'home'});
             },
 
