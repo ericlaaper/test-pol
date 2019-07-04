@@ -1,5 +1,6 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
-    <v-flex xs12 sm6 offset-sm3>
+
+    <v-container xs12 sm6 offset-sm3>
         <v-card>
             <v-toolbar color="info">
                 <v-toolbar-title class="white--text">Noodsituatie</v-toolbar-title>
@@ -14,14 +15,17 @@
                 <v-stepper-content step="1">
                     <div class="vraag">
                         <h1>
-                        Welkom
+                            Welkom
                         </h1>
                     </div>
 
                     <div class="normaal">
                         <p>
-                            Veel ondernemers schatten het risico op het plotseling wegvallen als gevolg van een ziekte of ongeval laag in. Dat maakt dat ze weinig tot geen maatregelen nemen om hun onderneming en gezin tegen de impact hiervan te beschermen.  <br>
-                            Met deze App nodigen wij u uit een korte vragenlijst over Noodopvolging voor uzelf in te vullen. Met de knop Verder gaat u naar de inleiding.
+                            Veel ondernemers schatten het risico op het plotseling wegvallen als gevolg van een ziekte
+                            of ongeval laag in. Dat maakt dat ze weinig tot geen maatregelen nemen om hun onderneming en
+                            gezin tegen de impact hiervan te beschermen. <br>
+                            Met deze App nodigen wij u uit een korte vragenlijst over Noodopvolging voor uzelf in te
+                            vullen. Met de knop Verder gaat u naar de inleiding.
                         </p>
                     </div>
 
@@ -37,19 +41,28 @@
                     </div>
                 </v-stepper-step>
                 <v-stepper-content step="2">
-                    <video controls
-                           poster="../assets/start.png"
-                           class="alignVideo"
-                           src="../assets/Noodopvolging.mp4"
-                           type='video/mp4'
-                            muted >
-                    </video>
+                    <vue-plyr>
+                        <div data-plyr-provider="vimeo" data-plyr-embed-id="343069770"></div>
+                    </vue-plyr>
+
+                    <!--                    <div class="iframe-wrapper">-->
+<!--                        <iframe src="https://player.vimeo.com/video/343069770"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
+
+<!--                    </div>-->
+                    <!--                    <video controls-->
+                    <!--                           poster="../assets/start.png"-->
+                    <!--                           class="alignVideo"-->
+                    <!--                           src="../assets/Noodopvolging.mp4"-->
+                    <!--                           type='video/mp4'-->
+                    <!--                            muted >-->
+                    <!--                    </video>-->
                     <div class="normaal">
-                        <h1>en even een test</h1>
+                        <h1>Introductie</h1>
                     </div>
                     <div class="normaal">
                         <p>
-                            In de bovenstaande animatie treft u een korte inleiding aan op het onderwerp Noodopvolging. U kunt de animatie ook overslaan en direct naar de eerste vraag gaan met de knop Verder.
+                            In de bovenstaande animatie treft u een korte inleiding aan op het onderwerp Noodopvolging.
+                            U kunt de animatie ook overslaan en direct naar de eerste vraag gaan met de knop Verder.
 
                         </p>
                     </div>
@@ -65,10 +78,11 @@
                 <v-stepper-content step="3">
                     <div class="normaal">
                         <p>
-                        Voor uw medewerkers, klanten en leveranciers bent u het boegbeeld van uw onderneming. Als u
-                        plotseling wegvalt, kan dit betekenen dat het vertrouwen in de toekomst van de onderneming wordt
-                        aangetast.<br>Met als gevolg dat uw belangrijkste stakeholders andere keuzes maken en de
-                        bedrijfscontinuïteit in korte tijd onder druk kan komen te staan.
+                            Voor uw medewerkers, klanten en leveranciers bent u het boegbeeld van uw onderneming. Als u
+                            plotseling wegvalt, kan dit betekenen dat het vertrouwen in de toekomst van de onderneming
+                            wordt
+                            aangetast.<br>Met als gevolg dat uw belangrijkste stakeholders andere keuzes maken en de
+                            bedrijfscontinuïteit in korte tijd onder druk kan komen te staan.
                         </p>
                     </div>
                     <div><br></div>
@@ -82,8 +96,8 @@
                             Mijn onderneming blijft gewoon doordraaien als ik plotseling wegval!
                         </h1>
                     </div>
-                    <ta-slider :test1.sync="vraag1e"></ta-slider>
-
+<!--                    <ta-slider :test1.sync="vraag1e"></ta-slider>-->
+                    <ta-slider2 v-model="vraag1e"></ta-slider2>
                     <knopverder
                             :onClick="verderzonderval">
                     </knopverder>
@@ -99,10 +113,11 @@
                 <v-stepper-content step="4">
                     <div class="normaal">
                         <p>
-                        In de situatie dat u plotseling niet aanwezig kunt zijn, zal iemand anders uw dagelijkse
-                        werkzaamheden moeten overnemen. Binnen de onderneming zal dit ook duidelijk moeten zijn, zodat
-                        er geen verwarring ontstaat over de dagelijkse leiding. Iemand die tijdelijk de dagelijkse
-                        leiding overneemt, noemt men een waarnemer.
+                            In de situatie dat u plotseling niet aanwezig kunt zijn, zal iemand anders uw dagelijkse
+                            werkzaamheden moeten overnemen. Binnen de onderneming zal dit ook duidelijk moeten zijn,
+                            zodat
+                            er geen verwarring ontstaat over de dagelijkse leiding. Iemand die tijdelijk de dagelijkse
+                            leiding overneemt, noemt men een waarnemer.
                         </p>
                     </div>
                     <div class="vraag">
@@ -147,11 +162,12 @@
                 <v-stepper-content step="5">
                     <div class="normaal">
                         <p>
-                        In de situatie dat u permanent niet meer aanwezig kunt zijn, bijvoorbeeld door zware
-                        arbeidsongeschiktheid of overlijden, zal iemand uw rol moeten overnemen. Wij noemen deze persoon
-                        uw noodopvolger. Dit hoeft niet dezelfde persoon te zijn als uw waarnemer, maar dat kan
-                        natuurlijk wel.<br>Belangrijk
-                        is dat uw noodopvolger uw onderneming juridisch mag vertegenwoordigen.
+                            In de situatie dat u permanent niet meer aanwezig kunt zijn, bijvoorbeeld door zware
+                            arbeidsongeschiktheid of overlijden, zal iemand uw rol moeten overnemen. Wij noemen deze
+                            persoon
+                            uw noodopvolger. Dit hoeft niet dezelfde persoon te zijn als uw waarnemer, maar dat kan
+                            natuurlijk wel.<br>Belangrijk
+                            is dat uw noodopvolger uw onderneming juridisch mag vertegenwoordigen.
                         </p>
                     </div>
                     <div class="vraag">
@@ -196,9 +212,14 @@
                 <v-stepper-content step="6">
                     <div class="normaal">
                         <p>
-                            Nog meer dan bij de keuze van een waarnemer, spelen de kennis, ervaring en managementvaardigheden een rol bij de keuze van een noodopvolger.<br>
-                            Uw noodopvolger zal in staat moeten zijn om uw onderneming veilig door de ontstane crisis te loodsen, over een langere tijd leiding moeten geven en betrokken moeten zijn bij de overdracht of verkoop van uw onderneming.<br>
-                            Dit vraagt om persoonlijke vaardigheden zoals managementvaardigheden, stressbestendigheid, persoonlijk overwicht en senioriteit. In hoeverre beschikt uw beoogde opvolger over deze vaardigheden?
+                            Nog meer dan bij de keuze van een waarnemer, spelen de kennis, ervaring en
+                            managementvaardigheden een rol bij de keuze van een noodopvolger.<br>
+                            Uw noodopvolger zal in staat moeten zijn om uw onderneming veilig door de ontstane crisis te
+                            loodsen, over een langere tijd leiding moeten geven en betrokken moeten zijn bij de
+                            overdracht of verkoop van uw onderneming.<br>
+                            Dit vraagt om persoonlijke vaardigheden zoals managementvaardigheden, stressbestendigheid,
+                            persoonlijk overwicht en senioriteit. In hoeverre beschikt uw beoogde opvolger over deze
+                            vaardigheden?
                         </p>
                     </div>
 
@@ -230,7 +251,10 @@
                 <v-stepper-content step="7">
                     <div class="normaal">
                         <p>
-                            Belangrijk is dat in uw afwezigheid uw noodopvolger de onderneming juridisch kan vertegenwoordigen. Denk hierbij aan afspraken met klanten en leveranciers, de inschrijving bij de Kamer van Koophandel, maar ook inzicht en toegang tot de zakelijke rekeningen en het uitvoeren van betalingen.
+                            Belangrijk is dat in uw afwezigheid uw noodopvolger de onderneming juridisch kan
+                            vertegenwoordigen. Denk hierbij aan afspraken met klanten en leveranciers, de inschrijving
+                            bij de Kamer van Koophandel, maar ook inzicht en toegang tot de zakelijke rekeningen en het
+                            uitvoeren van betalingen.
                         </p>
                     </div>
                     <div class="vraag">
@@ -282,8 +306,12 @@
                 <v-stepper-content step="8">
                     <div class="normaal">
                         <p>
-                            In de situatie dat u permanent niet meer aanwezig kunt zijn, zal de onderneming uiteindelijk in andere handen overgaan of wellicht zelfs in het uiterste geval haar activiteiten staken.<br>
-                            Voor uw noodopvolger en gezin is het van essentieel belang om te weten wat uw wensen zijn als u zelf niet meer betrokken kunt zijn bij uw onderneming. Allereerst wat is de strategie van het bedrijf en is deze strategie bij alle betrokkenen?
+                            In de situatie dat u permanent niet meer aanwezig kunt zijn, zal de onderneming uiteindelijk
+                            in andere handen overgaan of wellicht zelfs in het uiterste geval haar activiteiten
+                            staken.<br>
+                            Voor uw noodopvolger en gezin is het van essentieel belang om te weten wat uw wensen zijn
+                            als u zelf niet meer betrokken kunt zijn bij uw onderneming. Allereerst wat is de strategie
+                            van het bedrijf en is deze strategie bij alle betrokkenen?
 
                         </p>
                     </div>
@@ -330,12 +358,15 @@
                 <v-stepper-content step="9">
                     <div class="normaal">
                         <p>
-                            Daarnaast is er de strategische keuze met betrekking tot het eigendom over de onderneming. Dienen uw naasten het eigendom in het bedrijf voort te zetten of wilt u dat het bedrijf wordt verkocht?
+                            Daarnaast is er de strategische keuze met betrekking tot het eigendom over de onderneming.
+                            Dienen uw naasten het eigendom in het bedrijf voort te zetten of wilt u dat het bedrijf
+                            wordt verkocht?
                         </p>
                     </div>
                     <div class="vraag">
                         <h1>
-                            Hebt u uw wensen over de toekomst van uw bedrijf, bijvoorbeeld overdragen of verkopen, vastgelegd?
+                            Hebt u uw wensen over de toekomst van uw bedrijf, bijvoorbeeld overdragen of verkopen,
+                            vastgelegd?
                         </h1>
                     </div>
                     <v-form v-model="valid4" ref="form4" lazy-validation>
@@ -377,11 +408,12 @@
                 <v-stepper-content step="10">
                     <div class="normaal">
                         <p>
-                        In de situatie dat u permanent niet meer aanwezig kunt zijn, zult u ook uw gezin willen
-                        beschermen tegen de gevolgen hiervan. Vanuit financieel oogpunt zult u bijvoorbeeld het verlies
-                        aan inkomen voor een belangrijk deel of zelfs volledig willen compenseren. Dat vraagt om een
-                        aantal financiële maatregelen, zowel binnen de onderneming als in de privésituatie.<br>Bijvoorbeeld
-                        als u een eigen woning hebt gekocht en daarvoor financiering hebt aangetrokken.
+                            In de situatie dat u permanent niet meer aanwezig kunt zijn, zult u ook uw gezin willen
+                            beschermen tegen de gevolgen hiervan. Vanuit financieel oogpunt zult u bijvoorbeeld het
+                            verlies
+                            aan inkomen voor een belangrijk deel of zelfs volledig willen compenseren. Dat vraagt om een
+                            aantal financiële maatregelen, zowel binnen de onderneming als in de privésituatie.<br>Bijvoorbeeld
+                            als u een eigen woning hebt gekocht en daarvoor financiering hebt aangetrokken.
                         </p>
                     </div>
                     <div class="vraag">
@@ -437,49 +469,53 @@
                     </div>
                     <div class="normaal">
                         <p>
-                        U bent aan het einde gekomen van deze vragenlijst. U kunt u gegeven antwoorden nog aanpassen.
-                        Gebruik hiervoor de knoppen terug en verder.<br> Binnen enkele minuten kunt u uw persoonlijke rapportage
-                        verwachten in uw mailbox. (Vergeet niet op verstuur te klikken)
+                            U bent aan het einde gekomen van deze vragenlijst. U kunt u gegeven antwoorden nog
+                            aanpassen.
+                            Gebruik hiervoor de knoppen terug en verder.<br> Binnen enkele minuten kunt u uw
+                            persoonlijke rapportage
+                            verwachten in uw mailbox. (Vergeet niet op verstuur te klikken)
+                            U bent aan het einde gekomen van deze vragenlijst. U kunt u gegeven antwoorden nog
+                            aanpassen.
+
                         </p>
                     </div>
-<!--                    <div class="stelling">-->
-<!--                        Opmerkingen-->
-<!--                    </div>-->
-<!--                    <div class="normaal">-->
-<!--                        Heeft u direct al opmerkingen of vragen hebben naar aanleiding van deze vragenlijst dan kunt u-->
-<!--                        deze onderstaand kwijt. <br> <br>-->
-<!--                    </div>-->
-<!--                    <v-form v-model="valid6" ref="form6" lazy-validation>-->
-<!--                        <v-textarea-->
-<!--                                label="Opmerking of vraag"-->
-<!--                                v-model="opmerking"-->
-<!--                                rows="3"-->
-<!--                                :rules="[v => v.length <= 150 || 'U hebt maximaal 150 tekens']"-->
-<!--                                :counter="150"-->
+                    <!--                    <div class="stelling">-->
+                    <!--                        Opmerkingen-->
+                    <!--                    </div>-->
+                    <!--                    <div class="normaal">-->
+                    <!--                        Heeft u direct al opmerkingen of vragen hebben naar aanleiding van deze vragenlijst dan kunt u-->
+                    <!--                        deze onderstaand kwijt. <br> <br>-->
+                    <!--                    </div>-->
+                    <!--                    <v-form v-model="valid6" ref="form6" lazy-validation>-->
+                    <!--                        <v-textarea-->
+                    <!--                                label="Opmerking of vraag"-->
+                    <!--                                v-model="opmerking"-->
+                    <!--                                rows="3"-->
+                    <!--                                :rules="[v => v.length <= 150 || 'U hebt maximaal 150 tekens']"-->
+                    <!--                                :counter="150"-->
 
-<!--                        ></v-textarea>-->
+                    <!--                        ></v-textarea>-->
 
-                        <div class="normaal">
-                            <p>
+                    <div class="normaal">
+                        <p>
                             Wij gaan op een zorgvuldige wijze met uw gegevens om. Kijk voor al onze voorwaarden op onze
                             website!<br>
                             www.trustedaccountant.nl/privacy<br>
-                                (Vergeet niet op verstuur te klikken)
-                            </p>
+                            (Vergeet niet op verstuur te klikken)
+                        </p>
 
-                        </div>
-                        <div>
-                            <br>
-                            <br>
-                        </div>
-                        <v-btn color="primary"
-                               @click="verdermetval6"
-                               :disabled="!valid6"
-                        >Verstuur
-                        </v-btn>
-                        <knopterug :onClick="terug">
-                        </knopterug>
-
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <v-btn color="primary"
+                           @click="verdermetval6"
+                           :disabled="!valid6"
+                    >Verstuur
+                    </v-btn>
+                    <knopterug :onClick="terug">
+                    </knopterug>
 
 
                 </v-stepper-content>
@@ -487,7 +523,7 @@
 
 
         </v-card>
-    </v-flex>
+    </v-container>
 </template>
 
 <script>
@@ -499,10 +535,12 @@
     import Knopverder from "../components/knopverder";
     import Knopterug from "../components/knopterug";
     import axios from 'axios';
+    import TaSlider2 from "../components/slider/ta-slider2";
+
 
     export default {
         name: "Module1.vue",
-        components: {Knopterug, Knopverder, Stellingtekst, Vraagtekst, Standtekst, TaSlider},
+        components: {TaSlider2, Knopterug, Knopverder, Stellingtekst, Vraagtekst, Standtekst, TaSlider},
         data() {
             return {
                 valid: true,
@@ -520,7 +558,7 @@
                 vraag1e: 0,
                 vraag2e: null,
                 vraag3e: null,
-                vraag4e:0,
+                vraag4e: 0,
                 vraag5e: null,
                 vraag6e: null,
                 vraag7e: null,
@@ -572,7 +610,7 @@
             verdermetval6() {
                 console.log('Verzenden');
                 let data = JSON.stringify({
-                    token:  this.token,
+                    token: this.token,
                     vraag1e: this.vraag1e,
                     vraag2e: this.vraag2e,
                     vraag3e: this.vraag3e,
@@ -587,10 +625,7 @@
 
                 axios.post('https://trustedaccountant.tools-mkbadviespraktijk.nl/api/Bewaarquick1ex', data, {
                         headers: {
-                            'Content-Type': 'application/json;charset=UTF-8',
-                            "Access-Control-Allow-Origin": "*",
-                            "Access-Control-Allow-Methods": "*",
-                            "Access-Control-Allow-Headers": "*"
+
 
                         }
                     }
@@ -598,19 +633,14 @@
                     .then(function (response) {
 
                         console.log(response);
-                        this.$router.push({ name:'home'});
+                        this.$router.push({name: 'home'});
                     })
                     .catch(function (error) {
                         console.log(error);
                     });
                 localStorage.clear();
-                this.$router.push({ name:'home'});
+                this.$router.push({name: 'home'});
             },
-
-
-
-
-
 
 
             verderzonderval() {
@@ -795,6 +825,21 @@
 
         }
 
+        .iframe-wrapper {
+            position: relative;
+
+            padding-bottom: 56.25%;
+
+            overflow: hidden;
+        }
+
+        .iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
     }
 

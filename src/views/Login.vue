@@ -117,8 +117,12 @@
                     headers: {
                         // 'X-CSRF-TOKEN': window.Laravel.csrfToken,
                         // 'X-Requested-With': 'XMLHttpRequest'
-                        'Content-Type': 'application/json;charset=UTF-8',
-                        "Access-Control-Allow-Origin": "*",
+
+
+                        // 'Accept':'x-www-form-urlencoded',
+                        // 'Access-Control-Allow-Credentials': true,
+
+
                     }
                 })
                     .then(response => {

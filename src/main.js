@@ -5,11 +5,12 @@ import router from './router'
 import store from './store'
 import './registerServiceWorker'
 import axios from 'axios'
-
+import VuePlyr from 'vue-plyr'
+import 'vue-plyr/dist/vue-plyr.css'
 
 
 Vue.config.productionTip = false;
-
+Vue.use(VuePlyr)
 
 
 new Vue({
