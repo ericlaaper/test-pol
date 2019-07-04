@@ -113,7 +113,7 @@
                     email: this.email,
                 });
 
-                axios.post('https://trustedaccountant.tools-mkbadviespraktijk.nl/api/Loginquick1', data, {
+                axios.post('https://ta-tools.nl/api/Loginquick1', data, {
                     headers: {
                         // 'X-CSRF-TOKEN': window.Laravel.csrfToken,
                         // 'X-Requested-With': 'XMLHttpRequest'
