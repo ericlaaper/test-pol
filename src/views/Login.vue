@@ -38,29 +38,7 @@
 
 
 
-<!--               <v-card class="mb-2">-->
-<!--&lt;!&ndash;                <div class="signin-form">&ndash;&gt;-->
-<!--                    <form @submit.prevent="onSubmit">-->
-<!--                        <div class="input">-->
-<!--                            <label for="email">e-mail</label>-->
-<!--                            <input-->
-<!--                                    type="email"-->
-<!--                                    id="email"-->
-<!--                                    v-model="email">-->
-<!--                        </div>-->
-<!--                        <div class="input">-->
-<!--                            <label for="password">Wachtwoord</label>-->
-<!--                            <input-->
-<!--                                    type="password"-->
-<!--                                    id="password"-->
-<!--                                    v-model="wachtwoord">-->
-<!--                        </div>-->
-<!--                        <div class="submit">-->
-<!--                            <button type="submit">Submit</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--               </v-card>-->
-<!--                </div>-->
+
             </div>
             <div>
                 <v-alert
@@ -113,7 +91,7 @@
                     email: this.email,
                 });
 
-                axios.post('https://trustedaccountant.tools-mkbadviespraktijk.nl/api/Loginquick1', data, {
+                axios.post('/Loginquick1', data, {
                     headers: {
                         // 'X-CSRF-TOKEN': window.Laravel.csrfToken,
                         // 'X-Requested-With': 'XMLHttpRequest'
@@ -138,20 +116,15 @@
                             localStorage.setItem('token',JSON.stringify(response.data.token));
                             localStorage.setItem('email', JSON.stringify(this.email));
                             localStorage.setItem('wachtwoord', JSON.stringify(this.wachtwoord));
+                            this.$store.commit("change", response.data.token);
                             this.$router.push({ path: '/quickscan' })
-                            // naar volgende pagina
-                            //  slim opslaan
+
 
                         }
                     })
 
 
-                // ( response =>   {
-                //     console.log(response);
-                //     token = response.data.data.token;
-                //     localStorage.setItem('token', response.data.data.token)
-                //
-                // })
+
                 }
             },
 

@@ -45,17 +45,7 @@
                         <div data-plyr-provider="vimeo" data-plyr-embed-id="343069770"></div>
                     </vue-plyr>
 
-                    <!--                    <div class="iframe-wrapper">-->
-<!--                        <iframe src="https://player.vimeo.com/video/343069770"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
 
-<!--                    </div>-->
-                    <!--                    <video controls-->
-                    <!--                           poster="../assets/start.png"-->
-                    <!--                           class="alignVideo"-->
-                    <!--                           src="../assets/Noodopvolging.mp4"-->
-                    <!--                           type='video/mp4'-->
-                    <!--                            muted >-->
-                    <!--                    </video>-->
                     <div class="normaal">
                         <h1>Introductie</h1>
                     </div>
@@ -623,7 +613,7 @@
                 });
 
 
-                axios.post('https://trustedaccountant.tools-mkbadviespraktijk.nl/api/Bewaarquick1ex', data, {
+                axios.post('/Bewaarquick1ex', data, {
                         headers: {
 
 

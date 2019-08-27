@@ -10,7 +10,9 @@ import 'vue-plyr/dist/vue-plyr.css'
 
 
 Vue.config.productionTip = false;
-Vue.use(VuePlyr)
+Vue.use(VuePlyr);
+
+axios.defaults.baseURL='https://ta-tools.nl/api';
 
 
 new Vue({

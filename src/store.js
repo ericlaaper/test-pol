@@ -1,16 +1,35 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
+    state: {
+        idToken:null,
 
-  },
-  mutations: {
+    },
+    mutations: {
 
-  },
-  actions: {
+        change(state, idToken){
+            state.idToken = idToken
+        },
 
-  }
+
+
+    },
+    actions: {
+
+    },
+
+    getters:{
+        idToken(state){
+            return state.idToken;
+        },
+
+        isAuthenticated (state) {
+            return state.idToken !== null
+        }
+
+    }
+
 })
