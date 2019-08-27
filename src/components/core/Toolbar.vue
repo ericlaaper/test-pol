@@ -1,43 +1,22 @@
 <template>
     <div>
     <v-toolbar flat app>
-        <v-toolbar-side-icon @click="drawer = !drawer" class="grey--text"></v-toolbar-side-icon>
+
         <v-toolbar-title class="text-uppercase grey--text">
             <span class="red--text font-weight-light">Trusted </span>
             <span class="blue--text">Accountant</span>
         </v-toolbar-title>
         <v-spacer></v-spacer>
 
+        <div v-if="auth" align="end">
+            <v-btn flat color="red" @click="logout">
+                <span>Log uit</span>
+                <v-icon right>exit_to_app</v-icon>
+            </v-btn>
+        </div>
     </v-toolbar>
         <!-- dropdown menu -->
-        <v-navigation-drawer app v-model="drawer" class="secondary">
-            <v-layout column align-center>
-                <v-flex class="mt-5">
-                    <v-avatar size="110">
-                        <img class="text-lg-center" src="img/logo.png">
-                    </v-avatar>
-                    <p class="red--text-center subheading mt-1">
-                        <span class="red--text">Trusted </span>
-                        <span class="blue--text">Accountant</span></p>
-                </v-flex>
 
-            </v-layout>
-            <v-list>
-                <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
-                    <v-list-tile-action>
-                        <v-icon class="white--text">{{ link.icon }}</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                        <v-list-tile-title class="white--text">{{ link.text }}</v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
-            </v-list>
-        </v-navigation-drawer>
-
-        <v-btn flat color="grey">
-            <span>Sign Out</span>
-            <v-icon right>exit_to_app</v-icon>
-        </v-btn>
 
     </div>
 
@@ -62,9 +41,21 @@
         }
     },
 
+        computed: {
+            auth () {
+                return this.$store.getters.isAuthenticated
+            }
+        },
+
         methods: {
-            naarlogin(){
-                router.push('login')
+            logout() {
+                let data1 = null;
+                console.log("logout");
+                localStorage.removeItem('token');
+                localStorage.removeItem('email');
+                localStorage.removeItem('wachtwoord');
+                this.$store.commit("change", data1);
+                router.replace('login')
             }
         }
     }
