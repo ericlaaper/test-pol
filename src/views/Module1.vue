@@ -270,7 +270,7 @@
                                     </div>
                                 </template>
                             </v-radio>
-                            <v-radio value='onbekend'>
+                            <v-radio value='?'>
                                 <template slot="label">
                                     <div class="normaal">
                                         weet niet / onbekend
@@ -429,7 +429,7 @@
                                     </div>
                                 </template>
                             </v-radio>
-                            <v-radio value='onbekend'>
+                            <v-radio value='?'>
                                 <template slot="label">
                                     <div class="normaal">
                                         weet niet /onbekend
@@ -469,22 +469,7 @@
 
                         </p>
                     </div>
-                    <!--                    <div class="stelling">-->
-                    <!--                        Opmerkingen-->
-                    <!--                    </div>-->
-                    <!--                    <div class="normaal">-->
-                    <!--                        Heeft u direct al opmerkingen of vragen hebben naar aanleiding van deze vragenlijst dan kunt u-->
-                    <!--                        deze onderstaand kwijt. <br> <br>-->
-                    <!--                    </div>-->
-                    <!--                    <v-form v-model="valid6" ref="form6" lazy-validation>-->
-                    <!--                        <v-textarea-->
-                    <!--                                label="Opmerking of vraag"-->
-                    <!--                                v-model="opmerking"-->
-                    <!--                                rows="3"-->
-                    <!--                                :rules="[v => v.length <= 150 || 'U hebt maximaal 150 tekens']"-->
-                    <!--                                :counter="150"-->
 
-                    <!--                        ></v-textarea>-->
 
                     <div class="normaal">
                         <p>
@@ -540,6 +525,7 @@
                 valid4: true,
                 valid5: true,
                 valid6: true,
+                status1:true,
                 token: '',
                 status: 0,
                 stap: 1,
@@ -608,7 +594,8 @@
                     vraag5e: this.vraag5e,
                     vraag6e: this.vraag6e,
                     vraag7e: this.vraag7e,
-                    vraag8e: this.vraag8e
+                    vraag8e: this.vraag8e,
+                    status1: this.status1,
 
                 });
 

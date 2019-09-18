@@ -12,7 +12,7 @@ import 'vue-plyr/dist/vue-plyr.css'
 Vue.config.productionTip = false;
 Vue.use(VuePlyr);
 
-axios.defaults.baseURL='https://ta-tools.nl/api';
+axios.defaults.baseURL='https://ta-tools/api';
 
 
 new Vue({
