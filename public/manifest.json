@@ -1,6 +1,6 @@
 {
-  "name": "quickscan_ehpc",
-  "short_name": "quickscan_ehpc",
+  "name": "QuickSan Noodplan",
+  "short_name": "QS nooplan",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

@@ -1,24 +1,55 @@
 <template>
-    <div class="stellingtekst">
-        <h1>
-            {{stelling}}
-        </h1>
+    <div>
+           <v-radio-group
+                v-model="interface"
+                :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
+                required>
+            <v-radio value='ja'>
+                <template slot="label">
+                    <div class="normaalradio">
+                       ja
+                    </div>
+                </template>
+            </v-radio>
+            <v-radio value='nee'>
+                <template slot="label">
+                    <div class="normaalradio">
+                        nee
+                    </div>
+                </template>
+            </v-radio>
+        </v-radio-group>
 
     </div>
 </template>
 
 <script>
     export default {
-        name: "stellingtekst",
-        props: ['stelling'],
+        name: "Radiojanee",
+        props: {
+            value: null
+        },
+        data() {
+            return {}
+        },
+
+        computed: {
+            interface: {
+                get() {
+                    return this.value
+                },
+                set(val) {
+                    this.$emit('input', val)
+                }
+            },
+        },
     }
 </script>
 
 <style scoped>
 
-    .stellingtekst {
-        color: #2196F3;
-        margin-top: 1em;
+    .normaalradio {
+        color: #607D8B;
     }
 
     @media (min-width: 200px) {
@@ -124,6 +155,5 @@
         }
 
     }
-
 
 </style>

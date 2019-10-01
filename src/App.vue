@@ -2,8 +2,8 @@
     <v-app ma-0 pa-0>
         <v-parallax
 
+                src="img/wereldbol.jpg"
                 height="1350"
-                v-image :src="require('./assets/wereldbol.jpg')"
 
         >
 

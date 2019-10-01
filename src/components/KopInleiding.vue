@@ -1,7 +1,7 @@
 <template>
-    <div class="stellingtekst">
+    <div class="stand">
         <h1>
-            {{stelling}}
+            {{kop}}
         </h1>
 
     </div>
@@ -9,15 +9,15 @@
 
 <script>
     export default {
-        name: "stellingtekst",
-        props: ['stelling'],
+        name: "KopInleiding",
+        props: ['kop'],
     }
 </script>
 
 <style scoped>
 
-    .stellingtekst {
-        color: #2196F3;
+    .stand {
+        color: #C62828;
         margin-top: 1em;
     }
 

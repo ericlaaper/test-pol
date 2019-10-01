@@ -1,24 +1,26 @@
 <template>
-    <div class="stellingtekst">
-        <h1>
-            {{stelling}}
-        </h1>
+    <div class="regulier">
+        <p>
+            {{tekst1}}
+            <br>
+            {{tekst2}}
+        </p>
 
     </div>
 </template>
 
 <script>
     export default {
-        name: "stellingtekst",
-        props: ['stelling'],
+        name: "TekstInleiding",
+        props: ['tekst1', 'tekst2'],
     }
 </script>
 
 <style scoped>
 
-    .stellingtekst {
-        color: #2196F3;
-        margin-top: 1em;
+    .regulier {
+        color: #607D8B;
+
     }
 
     @media (min-width: 200px) {

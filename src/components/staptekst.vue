@@ -1,24 +1,20 @@
 <template>
-    <div class="stellingtekst">
-        <h1>
-            {{stelling}}
-        </h1>
-
+    <div class="kop">
+        {{staptekst}}
     </div>
 </template>
 
 <script>
     export default {
-        name: "stellingtekst",
-        props: ['stelling'],
+        name: "staptekst",
+        props: ['staptekst'],
     }
 </script>
 
 <style scoped>
 
-    .stellingtekst {
+    .kop {
         color: #2196F3;
-        margin-top: 1em;
     }
 
     @media (min-width: 200px) {

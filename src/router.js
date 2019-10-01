@@ -17,21 +17,6 @@ export default new Router({
             name: 'home',
             component: Home
         },
-
-
-        {
-            path: '/overleg',
-            name: 'Module1',
-            component: Module1,
-            beforeEnter (to, from, next) {
-                if (store.state.idToken) {
-                    next()
-                } else {
-                    next('/login')
-                }
-            }
-        },
-
         {
             path: '/quickscan',
             name: 'Module1',
@@ -44,21 +29,12 @@ export default new Router({
                 }
             }
         },
-
-
         {
             path: '/login',
             name: 'Login',
             component: Login
         },
 
-        // {
-        //     path: '/about',
-        //     name: 'about',
-        //     // route level code-splitting
-        //     // this generates a separate chunk (about.[hash].js) for this route
-        //     // which is lazy-loaded when the route is visited.
-        //     component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-        // }
+
     ]
 })

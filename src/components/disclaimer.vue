@@ -1,24 +1,25 @@
 <template>
-    <div class="stellingtekst">
-        <h1>
-            {{stelling}}
-        </h1>
+    <div class="discl">
+        <p>
+            Wij gaan op een zorgvuldige wijze met uw gegevens om. Kijk voor al onze voorwaarden op onze
+            website!<br>
+            www.trustedaccountant.nl/privacy<br>
+            (Vergeet niet op verstuur te klikken)
+        </p>
 
     </div>
 </template>
 
 <script>
     export default {
-        name: "stellingtekst",
-        props: ['stelling'],
+        name: "disclaimer"
     }
 </script>
 
 <style scoped>
 
-    .stellingtekst {
-        color: #2196F3;
-        margin-top: 1em;
+    .discl {
+        color: #607D8B;
     }
 
     @media (min-width: 200px) {
@@ -124,6 +125,5 @@
         }
 
     }
-
 
 </style>
