@@ -16,7 +16,7 @@ Vue.use(VueSweetalert2);
 Vue.use(VueScrollTo);
 Vue.use(VuePlyr);
 
-axios.defaults.baseURL='http://debackoffice.test/api';
+axios.defaults.baseURL='https://ta-tools.nl/api';
 
 new Vue({
   router,
