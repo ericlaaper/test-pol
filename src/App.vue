@@ -7,23 +7,22 @@
 
         >
 
-            <Toolbar></Toolbar>
+            <Toolbar/>
             <v-content>
-                <router-view></router-view>
+                <router-view/>
             </v-content>
         </v-parallax>
     </v-app>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld'
     import Toolbar from './components/core/Toolbar'
 
     export default {
         name: 'App',
         components: {
             Toolbar,
-            HelloWorld
+
         },
         data() {
             return {

@@ -1,23 +1,30 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib'
-import 'vuetify/src/stylus/app.styl'
-import nl from 'vuetify/es5/locale/nl'
+import Vue from 'vue';
+import Vuetify from 'vuetify/lib';
 
+Vue.use(Vuetify);
 
-Vue.use(Vuetify, {
+export default new Vuetify({
     theme: {
-        primary: '#d22630',
-        secondary: '#424242',
-        accent: '#82B1FF',
-        error: '#FF5252',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FFC107'
-    },
-    customProperties: true,
-    iconfont: 'md',
-    lang: {
-        locales: { nl },
-        current: 'nl'
+        dark:false,
+        themes: {
+            light: {
+                primary: '#d22630',
+                secondary: '#424242',
+                accent: '#82B1FF',
+                error: '#FF5252',
+                info: '#2196F3',
+                success: '#4CAF50',
+                warning: '#FFC107'
+            },
+            dark: {
+                primary: '#d22630',
+                secondary: '#424242',
+                accent: '#82B1FF',
+                error: '#FF5252',
+                info: '#346799',
+                success: '#4CAF50',
+                warning: '#ffe600'
+            },
+        },
     },
 })

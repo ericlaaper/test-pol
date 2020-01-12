@@ -27,7 +27,7 @@
                 </v-stepper-content>
                 <!--Stap 2-->
                 <v-stepper-step step="3">
-                    <Staptekst :staptekst="stapkop3"></Staptekst>
+                    <Staptekst :staptekst="stapkop3"/>
                 </v-stepper-step>
                 <v-stepper-content step="3">
                     <TekstInleiding :tekst1="stap3tekst1" :tekst2="stap3tekst2"/>
@@ -39,13 +39,13 @@
                 </v-stepper-content>
                 <!--Stap 3-->
                 <v-stepper-step step="4">
-                    <Staptekst :staptekst="stapkop4"></Staptekst>
+                    <Staptekst :staptekst="stapkop4"/>
                 </v-stepper-step>
                 <v-stepper-content step="4">
                     <TekstInleiding :tekst1="stap4tekst1" :tekst2="stap4tekst2"/>
                     <vraagtekst :vraag="vraagtekst4"/>
                     <v-form v-model="valid" ref="form" lazy-validation>
-                        <Radiojanee v-model="vraag2e"></Radiojanee>
+                        <Radiojanee v-model="vraag2e"/>
                         <knopverder :onClick="verdermetval" :disabled="!valid"/>
                         <knopterug :onClick="terug">
                         </knopterug>
@@ -53,20 +53,20 @@
                 </v-stepper-content>
                 <!--Stap 4-->
                 <v-stepper-step step="5">
-                    <Staptekst :staptekst="stapkop5"></Staptekst>
+                    <Staptekst :staptekst="stapkop5"/>
                 </v-stepper-step>
                 <v-stepper-content step="5">
                     <TekstInleiding :tekst1="stap5tekst1" :tekst2="stap5tekst2"/>
                     <vraagtekst :vraag="vraagtekst5"/>
                     <v-form v-model="valid1" ref="form1" lazy-validation>
-                        <Radiojanee v-model="vraag3e"></Radiojanee>
+                        <Radiojanee v-model="vraag3e"/>
                         <knopverder :onClick="verdermetval1" :disabled="!valid1"/>
                         <knopterug :onClick="terug"/>
                     </v-form>
                 </v-stepper-content>
                 <!--Stap 5-->
                 <v-stepper-step step="6">
-                    <Staptekst :staptekst="stapkop6"></Staptekst>
+                    <Staptekst :staptekst="stapkop6"/>
                 </v-stepper-step>
                 <v-stepper-content step="6">
                     <TekstInleiding :tekst1="stap6tekst1" :tekst2="stap6tekst2"/>
@@ -78,7 +78,7 @@
                 </v-stepper-content>
                 <!--Stap 6-->
                 <v-stepper-step step="7">
-                    <Staptekst :staptekst="stapkop7"></Staptekst>
+                    <Staptekst :staptekst="stapkop7"/>
                 </v-stepper-step>
                 <v-stepper-content step="7">
                     <TekstInleiding :tekst1="stap7tekst1" :tekst2="stap7tekst2"/>
@@ -91,7 +91,7 @@
                 </v-stepper-content>
                 <!--stap 7-->
                 <v-stepper-step step="8">
-                    <Staptekst :staptekst="stapkop8"></Staptekst>
+                    <Staptekst :staptekst="stapkop8"/>
                 </v-stepper-step>
                 <v-stepper-content step="8">
                     <TekstInleiding :tekst1="stap8tekst1" :tekst2="stap8tekst2"/>
@@ -104,7 +104,7 @@
                 </v-stepper-content>
                 <!--stap 8-->
                 <v-stepper-step step="9">
-                    <Staptekst :staptekst="stapkop9"></Staptekst>
+                    <Staptekst :staptekst="stapkop9"/>
                 </v-stepper-step>
                 <v-stepper-content step="9">
                     <TekstInleiding :tekst1="stap9tekst1" :tekst2="stap9tekst2"/>
@@ -118,7 +118,7 @@
                 <!--stap 9-->
 
                 <v-stepper-step step="10">
-                    <Staptekst :staptekst="stapkop10"></Staptekst>
+                    <Staptekst :staptekst="stapkop10"/>
                 </v-stepper-step>
                 <v-stepper-content step="10">
                     <TekstInleiding :tekst1="stap10tekst1" :tekst2="stap10tekst2"/>
@@ -302,6 +302,7 @@
                 }
             },
             verdermetval6() {
+                // eslint-disable-next-line
                 console.log('Verzenden');
                 let data = JSON.stringify({
                     token: this.token,
@@ -321,11 +322,11 @@
                         }
                     )
                     .then((response) => {
-
+// eslint-disable-next-line
                         console.log(response);
                         this.$swal({
 
-                            type: 'success',
+                            icon: 'success',
                             title: 'Rapportage',
                             text: 'Uw rapportage wordt verstuurd maar uw email adres.',
                             showConfirmButton: true,
@@ -335,9 +336,10 @@
                         this.$router.push({name: 'home'});
                     })
                     .catch((error) => {
+                        // eslint-disable-next-line
                         console.log(error);
                         this.$swal({
-                            type: 'warning',
+                            icon: 'warning',
                             title: 'Oops er gaat iets fout',
                             text: 'Let op er gaat iets niet goed',
                             footer: 'Probeer het aub nogmaals mocht u problemen blijven ondervinden neem dan contact met ons op!'
@@ -362,6 +364,7 @@
             },
         },
         mounted() {
+            // eslint-disable-next-line
             console.log('App mounted!');
             this.token = JSON.parse(localStorage.getItem('token'));
         },

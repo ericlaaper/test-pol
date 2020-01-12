@@ -1,7 +1,7 @@
 <template>
     <div>
            <v-radio-group
-                v-model="interface"
+                v-model="joppie"
                 :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                 required>
             <v-radio value='ja'>
@@ -34,7 +34,7 @@
         },
 
         computed: {
-            interface: {
+            joppie: {
                 get() {
                     return this.value
                 },

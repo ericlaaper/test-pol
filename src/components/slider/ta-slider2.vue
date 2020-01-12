@@ -3,7 +3,7 @@
         <div><br><br></div>
         <v-slider
                 prop="value"
-                v-model="interface"
+                v-model="joho"
                 :value="value"
                 :color="color"
                 always-dirty
@@ -13,10 +13,10 @@
 
         >
             <template v-slot:append>
-                <v-icon color="blue">add_circle_outline</v-icon>
+                <v-icon color="blue">mdi-plus-circle-outline</v-icon>
             </template>
             <template v-slot:prepend>
-                <v-icon color="error">remove_circle_outline</v-icon>
+                <v-icon color="error">mdi-minus-circle-outline</v-icon>
             </template>
 
         </v-slider>
@@ -52,7 +52,7 @@
         },
 
         computed: {
-            interface: {
+            joho: {
                 get() {
                     return this.value
                 },
@@ -63,8 +63,8 @@
 
 
             color() {
-                if (this.value < 0) return 'red'
-                if (this.value > 0) return 'blue'
+                if (this.value < 0) return 'red';
+                if (this.value > 0) return 'blue';
                 return 'red'
             },
         },

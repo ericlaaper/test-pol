@@ -1,14 +1,15 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
-import Module1 from './views/Module1.vue'
-import Login from './views/Login.vue'
+import VueRouter from 'vue-router'
+import Home from '../views/Home.vue'
+import Login from '../views/Login.vue'
+import Module1 from "../views/Module1";
 
-Vue.use(Router);
-import store from './store'
+import store from "../store"
+
+Vue.use(VueRouter);
 
 
-export default new Router({
+const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
@@ -17,6 +18,12 @@ export default new Router({
             name: 'home',
             component: Home
         },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login
+        },
+
         {
             path: '/quickscan',
             name: 'Module1',
@@ -29,12 +36,9 @@ export default new Router({
                 }
             }
         },
-        {
-            path: '/login',
-            name: 'Login',
-            component: Login
-        },
 
 
     ]
 })
+
+export default router

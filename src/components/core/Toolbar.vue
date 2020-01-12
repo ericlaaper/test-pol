@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-toolbar flat app>
+        <v-app-bar flat app>
             <v-toolbar-title>
                 <img
                         src="img/logo1.png"
@@ -9,12 +9,12 @@
             </v-toolbar-title>
             <v-spacer/>
             <div v-if="auth" align="end">
-                <v-btn flat color="red" @click="logout">
+                <v-btn text color="red" @click="logout">
                     <span>Log uit</span>
-                    <v-icon right>exit_to_app</v-icon>
+                    <v-icon right>mdi-exit-to-app</v-icon>
                 </v-btn>
             </div>
-        </v-toolbar>
+        </v-app-bar>
     </div>
 
 </template>
@@ -37,6 +37,7 @@
         methods: {
             logout() {
                 let data1 = null;
+                // eslint-disable-next-line
                 console.log("logout");
                 localStorage.removeItem('token');
                 localStorage.removeItem('email');

@@ -19,7 +19,7 @@
                                                 v-model="email"
                                                 :rules="emailRules"
                                                 required
-                                        ></v-text-field>
+                                        />
                                         <v-text-field
                                                 label="Vul uw paswoord in"
                                                 v-model="wachtwoord"
@@ -27,7 +27,7 @@
                                                 :type="e1 ? 'wachtwoord' : 'text'"
                                                 :rules="passwordRules"
                                                 required
-                                        ></v-text-field>
+                                        />
                                         <v-layout justify-space-between>
                                             <v-btn @click="submit" :class=" { 'blue darken-4 white--text' : valid, disabled: !valid }">Login</v-btn>
                                         </v-layout>
@@ -73,6 +73,7 @@
                 email: '',
                 emailRules: [
                     (v) => !!v || 'E-mail is verplicht',
+                    // eslint-disable-next-line
                     (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Dit lijkt geen goed email adres'
                 ],
                 wachtwoord: '',
@@ -84,6 +85,7 @@
         },
         methods: {
             submit() {
+                // eslint-disable-next-line
                 console.log('login clicked');
                 if (this.$refs.form.validate()){
                 let data = JSON.stringify({
@@ -104,13 +106,16 @@
                     }
                 })
                     .then(response => {
+                        // eslint-disable-next-line
                         console.log(response);
                         this.token = response.data.token;
                         if (this.token === undefined) {
+                            // eslint-disable-next-line
                             console.log('verkeerde gegevens');
                             this.alert = true;
                         }
                         else{
+                            // eslint-disable-next-line
                             console.log('juiste gegevens');
                             this.alert = false;
                             localStorage.setItem('token',JSON.stringify(response.data.token));
