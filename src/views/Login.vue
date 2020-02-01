@@ -2,7 +2,7 @@
     <v-flex xs12 sm6 offset-sm3>
         <v-card class="mb-5">
             <v-toolbar color="info">
-                <v-toolbar-title class="white--text">Noodsituatie</v-toolbar-title>
+                <v-toolbar-title class="white--text">Personal QuickScan Noodsituatie</v-toolbar-title>
             </v-toolbar>
 
             <div id="login">

@@ -1,17 +1,12 @@
 <template>
     <v-app ma-0 pa-0>
-        <v-parallax
-
-                src="img/wereldbol.jpg"
-                height="1350"
-
-        >
+        <div class="achtergrond">
 
             <Toolbar/>
             <v-content>
                 <router-view/>
             </v-content>
-        </v-parallax>
+        </div>
     </v-app>
 </template>
 
@@ -32,9 +27,19 @@
     }
 </script>
 <style scoped>
+
+
     .bb {
         padding-top: 0px;
 
+    }
+
+    .achtergrond {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: whitesmoke;
     }
 
 </style>

@@ -3,7 +3,7 @@
         <v-app-bar flat app>
             <v-toolbar-title>
                 <img
-                        src="img/logo1.png"
+                        src="img/logo.png"
                         width="150"
                 />
             </v-toolbar-title>
