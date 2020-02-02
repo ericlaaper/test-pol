@@ -17,7 +17,7 @@
 <style scoped>
 
     .vraagtekst {
-        color: #C62828;
+        color: #DC703A;
         margin-top: 2em;
     }
 

@@ -3,7 +3,7 @@
         <p>
             Wij gaan op een zorgvuldige wijze met uw gegevens om. Kijk voor al onze voorwaarden op onze
             website!<br>
-            www.vizier-accountants.nl<br>
+            www.mkbcoachpolet.nl<br>
             (Vergeet niet op verstuur te klikken)
         </p>
 

@@ -17,7 +17,7 @@
 <style scoped>
 
     .stand {
-        color: #C62828;
+        color: #DC703A;
         margin-top: 1em;
     }
 

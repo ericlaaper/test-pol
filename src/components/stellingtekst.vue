@@ -17,7 +17,7 @@
 <style scoped>
 
     .stellingtekst {
-        color: #2196F3;
+        color: #1F4B9A;
         margin-top: 1em;
     }
 

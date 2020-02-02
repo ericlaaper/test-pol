@@ -14,7 +14,7 @@
 <style scoped>
 
     .kop {
-        color: #2196F3;
+        color: #1F4B9A;
     }
 
     @media (min-width: 200px) {

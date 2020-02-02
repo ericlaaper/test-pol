@@ -16,7 +16,7 @@ Vue.use(VueSweetalert2);
 Vue.use(VueScrollTo);
 Vue.use(VuePlyr);
 
-axios.defaults.baseURL='https://vizier-advies.nl/api';
+axios.defaults.baseURL='https://polet-advies.nl/api';
 
 new Vue({
   router,

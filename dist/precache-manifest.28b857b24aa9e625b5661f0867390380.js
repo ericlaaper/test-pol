@@ -1,31 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fd3106e3af3862131dd",
-    "url": "/css/app.b592ea5a.css"
+    "revision": "2f47d1a07a4a1847ab47",
+    "url": "/css/app.b8432072.css"
   },
   {
     "revision": "af090d2bdafacaf41724",
     "url": "/css/chunk-vendors.6160ed7d.css"
   },
   {
-    "revision": "bf475ad56d25025711b1bc7a5284113f",
+    "revision": "57f0292816bfe20585e2d3ee0f9f6d66",
     "url": "/img/logo.png"
   },
   {
-    "revision": "093a59d4398dc0547c439a092121b164",
-    "url": "/img/logo1.png"
-  },
-  {
-    "revision": "1df7393f1f56076760c96f085fae7cc9",
-    "url": "/img/wereldbol.jpg"
-  },
-  {
-    "revision": "742fc20665de83b91da82aa4ea8ed80a",
+    "revision": "7be7aaabed9df2f207853a47d0c63dd7",
     "url": "/index.html"
   },
   {
-    "revision": "6fd3106e3af3862131dd",
-    "url": "/js/app.015ed99f.js"
+    "revision": "2f47d1a07a4a1847ab47",
+    "url": "/js/app.8f24a47a.js"
   },
   {
     "revision": "af090d2bdafacaf41724",

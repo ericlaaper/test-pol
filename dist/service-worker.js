@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.7205ec215252a670aaeedd693b7df6ce.js"
+  "/precache-manifest.28b857b24aa9e625b5661f0867390380.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "QuickScan_Noodplan"});
