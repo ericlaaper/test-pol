@@ -19,7 +19,7 @@
                 </v-stepper-step>
                 <v-stepper-content step="2">
                     <vue-plyr>
-                        <div data-plyr-provider="vimeo" data-plyr-embed-id="343069770"></div>
+                        <div data-plyr-provider="vimeo" data-plyr-embed-id="388964502"></div>
                     </vue-plyr>
                     <KopInleiding :kop="stap2kop"/>
                     <TekstInleiding :tekst1="stap2tekst1" :tekst2="stap2tekst2"/>
