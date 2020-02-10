@@ -19,9 +19,9 @@ Vue.use(VuePlyr);
 axios.defaults.baseURL='https://polet-advies.nl/api';
 
 new Vue({
+  vuetify,
   router,
   store,
-  vuetify,
   axios,
 
   render: h => h(App)
