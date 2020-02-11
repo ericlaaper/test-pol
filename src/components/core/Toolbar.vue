@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-app-bar flat app>
+        <v-app-bar text app>
             <v-toolbar-title>
                 <img
                         src="img/logo.png"

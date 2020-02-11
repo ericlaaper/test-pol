@@ -18,9 +18,10 @@
                     <Staptekst :staptekst="stapkop2"/>
                 </v-stepper-step>
                 <v-stepper-content step="2">
-                    <vue-plyr>
-                        <div data-plyr-provider="vimeo" data-plyr-embed-id="388964502"></div>
-                    </vue-plyr>
+                    <vimeo-player :video-id="388964502" class="embed-container" :options="{'responsive':true}"></vimeo-player>
+<!--                    <vue-plyr>-->
+<!--                        <div data-plyr-provider="vimeo" data-plyr-embed-id="388964502"></div>-->
+<!--                    </vue-plyr>-->
                     <KopInleiding :kop="stap2kop"/>
                     <TekstInleiding :tekst1="stap2tekst1" :tekst2="stap2tekst2"/>
                     <knopverder :onClick="verderzonderval"/>
@@ -372,6 +373,10 @@
 </script>
 
 <style scoped>
+    .embed-container {
+        width: 100% !important;
+    }
+
     @media (min-width: 200px) {
         p {
             font-size: 0.80em;
