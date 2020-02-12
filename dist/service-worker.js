@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.28bbd607dafdc63eb35de3cab88f2995.js"
+  "/precache-manifest.4e78c0842962208fe3c8fabc0dfacf76.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "QuickScan_Noodplan"});
+workbox.core.setCacheNameDetails({prefix: "Noodplan"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {

@@ -4,13 +4,8 @@
             <v-toolbar color="info">
                 <v-toolbar-title class="white--text">Personal QuickScan Noodsituatie</v-toolbar-title>
             </v-toolbar>
-
             <div id="login">
-
-
-
-
-                        <v-card>
+                    <v-card>
                             <v-card-text class="pt-4">
                                 <div>
                                     <v-form v-model="valid" ref="form">
@@ -74,7 +69,7 @@
                 emailRules: [
                     (v) => !!v || 'E-mail is verplicht',
                     // eslint-disable-next-line
-                    (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Dit lijkt geen goed email adres'
+                    (v) => /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(v) || 'Dit lijkt geen goed email adres'
                 ],
                 wachtwoord: '',
                 alert:false,
