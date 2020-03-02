@@ -20,22 +20,19 @@
             </template>
 
         </v-slider>
-        <v-layout row justify-space-between>
-            <v-flex xs2>
-                <div class="caption light-blue--text">
+        <v-row class="mt-0 mb-2">
+            <v-col :cols="4">
+                <div class="caption info--text text-left">
                     Ik twijfel hier sterk aan
                 </div>
-            </v-flex>
-            <v-flex xs2>
-
-            </v-flex>
-            <v-flex xs2>
-                <div class="caption light-blue--text">
+            </v-col>
+            <v-col :cols="4"></v-col>
+            <v-col :cols="4">
+                <div class="caption info--text text-right">
                     Ik twijfel hier niet aan
                 </div>
-            </v-flex>
-        </v-layout>
-
+            </v-col>
+        </v-row>
     </div>
 </template>
 
@@ -46,9 +43,7 @@
             value: null
         },
         data() {
-            return {
-
-            }
+            return {}
         },
 
         computed: {

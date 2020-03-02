@@ -4,23 +4,23 @@
                 v-model="plop"
                 :rules="[v => !!v || ' U kunt niet verder zonder eerst de vraag te hebben beantwoord']"
                 required>
-            <v-radio value='ja'>
-                <template slot="label">
-                    <div class="normaalradio">
+            <v-radio value='ja' color="info">
+                <template v-slot:label>
+                    <div class="warning--text">
                         ja
                     </div>
                 </template>
             </v-radio>
-            <v-radio value='nee'>
-                <template slot="label">
-                    <div class="normaalradio">
+            <v-radio value='nee' color="info">
+                <template v-slot:label>
+                    <div class="warning--text">
                         nee
                     </div>
                 </template>
             </v-radio>
-            <v-radio value='?'>
-                <template slot="label">
-                    <div class="normaalradio">
+            <v-radio value='?' color="info">
+                <template v-slot:label>
+                    <div class="warning--text">
                         weet niet / onbekend
                     </div>
                 </template>
@@ -55,9 +55,6 @@
 
 <style scoped>
 
-    .normaalradio {
-        color: #607D8B;
-    }
 
     @media (min-width: 200px) {
 

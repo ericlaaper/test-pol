@@ -4,7 +4,7 @@
             Wij gaan op een zorgvuldige wijze met uw gegevens om. Kijk voor al onze voorwaarden op onze
             website!<br>
             www.mkbcoachpolet.nl<br>
-            (Vergeet niet op verstuur te klikken)
+            (Vergeet niet op VERDER te klikken)
         </p>
 
     </div>

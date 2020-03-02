@@ -218,10 +218,10 @@
                 stap10tekst1: 'In de situatie dat u permanent niet meer aanwezig kunt zijn, zult u ook uw gezin willen beschermen tegen de gevolgen hiervan. Vanuit financieel oogpunt zult u bijvoorbeeld het verlies aan inkomen voor een belangrijk deel of zelfs volledig willen compenseren.',
                 stap10tekst2: 'Dat vraagt om een aantal financiële maatregelen, zowel binnen de onderneming als in de privésituatie. Bijvoorbeeld als u een eigen woning hebt gekocht en daarvoor financiering hebt aangetrokken.',
                 stap11kop: 'Einde',
-                stap11tekst1: 'U bent aan het einde gekomen van deze vragenlijst. U kunt u gegeven antwoorden nog aanpassen.',
+                stap11tekst1: 'U bent aan het einde gekomen van deze vragenlijst. U kunt de door u gegeven antwoorden nog aanpassen.',
                 stap11tekst2: 'Gebruik hiervoor de knoppen terug en verder.',
-                stap11atekst1: 'Binnen enkele minuten kunt u uw persoonlijke rapportage verwachten in uw mailbox. (Vergeet niet op verstuur te klikken)',
-                stap11atekst2: 'U bent aan het einde gekomen van deze vragenlijst. U kunt u gegeven antwoorden nog aanpassen.',
+                stap11atekst1: 'Binnen enkele minuten kunt u uw persoonlijke rapportage verwachten in uw mailbox.',
+                stap11atekst2: 'U bent aan het einde gekomen van deze vragenlijst. U kunt de door u gegeven antwoorden nog aanpassen.',
 
                 vraagtekst1: '',
                 vraagtekst2: '',
