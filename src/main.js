@@ -16,7 +16,7 @@ Vue.use(VueSweetalert2);
 Vue.use(vueVimeoPlayer);
 
 axios.defaults.baseURL='https://polet-advies.nl/api';
-// axios.defaults.baseURL='https://ta-tools.nl/api';
+// axios.defaults.baseURL='http://poletnw.test/api';
 
 new Vue({
   vuetify,
